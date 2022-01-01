@@ -33,9 +33,11 @@ def computerGuess(y):
 
 def computerVsHumanAuto(x):
     humanGuessNumber = random.randint(1, x)
+    
     low = 1
     high = x
     turn = 0
+
     while 1:
         random_number = random.randint(low, high)
         print(f"\nIs the number {random_number} Higher, Lower or Correct ?")
