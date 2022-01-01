@@ -35,10 +35,11 @@ def computerVsHumanAuto(x):
     humanGuessNumber = random.randint(1, x)
     low = 1
     high = x
+    turn = 0
     while 1:
         random_number = random.randint(low, high)
         print(f"\nIs the number {random_number} Higher, Lower or Correct ?")
-        time.sleep(0.5)
+        time.sleep(0.25)
         if random_number > humanGuessNumber:
             print(f"Its Higher")
             high = random_number
@@ -46,8 +47,9 @@ def computerVsHumanAuto(x):
             print(f"Its Lower")
             low = random_number
         elif random_number == humanGuessNumber:
-            print("Yayyy, computer has guessed the number\n")
+            print(f"Yayyy, computer has guessed the number in {turn} turns\n")
             break
+        turn = turn + 1
 
 
 #humanGuess(1000)
